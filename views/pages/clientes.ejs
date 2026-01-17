@@ -1,0 +1,36 @@
+<%- include('../partials/head') %>
+<%- include('../partials/navbar') %>
+
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Clientes</h2>
+    <a href="/admin" class="btn btn-main">Voltar ao Admin</a>
+  </div>
+
+  <div class="card p-3 shadow-sm">
+    <table class="table table-borderless table-hover align-middle mb-0">
+      <thead class="table-head">
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+        <tbody>
+          <% clientes.forEach(cliente => { %>
+            <tr>
+              <td><%= cliente.id %></td>
+              <td><%= cliente.nome %></td>
+              <td><%= cliente.email %></td>
+              <td><%= cliente.telefone %></td>
+              <td><%= cliente.dta_registo.toDateString() %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+    </table>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

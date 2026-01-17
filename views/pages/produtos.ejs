@@ -1,0 +1,36 @@
+<%- include('../partials/head') %>
+<%- include('../partials/navbar') %>
+
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Produtos</h2>
+    <a href="/admin" class="btn btn-main">Voltar ao Admin</a>
+  </div>
+
+  <div class="card p-3 shadow-sm">
+    <table class="table table-borderless table-hover align-middle mb-0">
+      <thead class="table-head">
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Categoria</th>
+          <th>Preço</th>
+          <th>Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% produtos.forEach(produto => { %>
+          <tr>
+            <td><%= produto.id %></td>
+            <td><%= produto.nome %></td>
+            <td><%= produto.categoria %></td>
+            <td><%= produto.preco %> €</td>
+            <td><%= produto.stock %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

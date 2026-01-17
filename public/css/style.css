@@ -1,0 +1,78 @@
+/* cores do projeto */
+:root {
+  --main-color: #0F3D3C;
+  --accent-color: #3DF0C8;
+  --neutral-color: #C6CDD3;
+}
+
+/* navbar */
+.bg-main {
+  background-color: var(--main-color);
+}
+
+.navbar .nav-link {
+  color: white;
+  margin-left: 15px;
+}
+
+.navbar .nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* botão principal */
+.btn-main {
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.btn-main:hover {
+  background-color: #0b2f2e;
+  color: white;
+  text-decoration: none;
+}
+
+/* layout geral */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background-color: #f8f9fa;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.navbar .nav-link,
+.btn-main {
+  font-weight: 600;
+}
+
+/* cartão de login */
+.login-card {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.card .badge {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 10px 16px;
+  display: inline-block;
+  min-width: 45px;
+  text-align: center;
+}
+
+.table-head th {
+  font-weight: 600;
+  border-bottom: 1px solid var(--neutral-color);
+}
